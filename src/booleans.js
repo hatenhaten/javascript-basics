@@ -1,18 +1,10 @@
-const negate = a => {
-  return !a;
-};
+const negate = a => !a;
 
-const both = (a, b) => {
-  return a && b;
-};
+const both = (a, b) => a && b;
 
-const either = (a, b) => {
-  return a || b;
-};
+const either = (a, b) => a || b;
 
-const none = (a, b) => {
-  return !a && !b;
-};
+const none = (a, b) => !a && !b;
 
 const one = (a, b) => {
   if (a && !b) {
@@ -22,39 +14,29 @@ const one = (a, b) => {
   } return false;
 };
 
+// const one = (a, b) => (a || b) && !(a && b);
+
 const truthiness = a => {
   if (!a) {
     return false;
   } return true;
 };
 
-const isEqual = (a, b) => {
-  return a === b;
-};
+// const truthiness = a => Boolean(a);
 
-const isGreaterThan = (a, b) => {
-  return a > b;
-};
+const isEqual = (a, b) => a === b;
 
-const isLessThanOrEqualTo = (a, b) => {
-  return a <= b;
-};
+const isGreaterThan = (a, b) => a > b;
 
-const isOdd = a => {
-  return (a % 2 !== 0);
-};
+const isLessThanOrEqualTo = (a, b) => a <= b;
 
-const isEven = a => {
-  return (a % 2 == 0)
-};
+const isOdd = a => a % 2 !== 0;
 
-const isSquare = a => {
-  return (Math.sqrt(a) % 1 == 0);
-};
+const isEven = a => a % 2 == 0;
 
-const startsWith = (char, string) => {
-  return (char === string[0]);
-};
+const isSquare = a => Math.sqrt(a) % 1 == 0;
+
+const startsWith = (char, string) => char === string[0];
 
 const containsVowels = string => {
   if (string.search(/[aeiouAEIOU]/) == true) {

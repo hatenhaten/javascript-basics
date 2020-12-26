@@ -5,38 +5,24 @@ const createPerson = (name, age) => {
   };
 };
 
-const getName = object => {
-  return object.name;
-};
+const getName = object => object.name;
 
-const getProperty = (property, object) => {
-  return object[property];
-};
+const getProperty = (property, object) => object[property];
 
-const hasProperty = (property, object) => {
-  return object.hasOwnProperty(property);
-};
+const hasProperty = (property, object) => object.hasOwnProperty(property);
 
-const isOver65 = person => {
-  return person.age > 65;
-};
+const isOver65 = person => person.age > 65;
 
-const getAges = people => {
-  return people.map(person => person.age);
-};
+const getAges = people => people.map(person => person.age);
 
-const findByName = (name, people) => {
-  return people.find(person => person.name == name);
-};
+const findByName = (name, people) => people.find(person => person.name == name);
 
-const findHondas = cars => {
-  return cars.filter(car => car.manufacturer == 'Honda');
-};
+const findHondas = cars => cars.filter(car => car.manufacturer == 'Honda');
 
 const averageAge = people => {
   const ages = people.map(person => person.age);
   const totalAges = ages.reduce((accumulator, currentVal) => accumulator + currentVal);
-  return totalAges / 3;
+  return totalAges / people.length;
 };
 
 const createTalkingPerson = (name, age) => {
